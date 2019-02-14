@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findMin(arr) {
+        let min = arr[0];
+        for (let i = 1, l = arr.length; i < l; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        return min;
+    }
+     function findMax(arr) {
+        let max  = arr[0];
+        for (let i = 1, l = arr.length; i< l; i++){
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+    var nums = [];
+    for (let i = 0; i< 100; ++i) {
+        nums[i] = Math.floor(Math.random() * 100);
+    }
+
+    var minValue = findMin(nums);
+    document.write("<br>");
+    document.write("The min value is: " + minValue);
+
+    var maxValue = findMax(nums);
+    document.write("<br/>");
+    document.write("The maximum value is: " + maxValue);
+
+</script>
+</body>
+</html>
